@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(238, 174, 202);
+            color: transparent;
+            background-image: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            background-clip: text;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6347;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #ff6347;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff4837;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Love Calculator</h1>
+        <div class="form-container">
+            <form method="post" action="{% url 'calculate_love' %}">
+                {% csrf_token %}
+                <label for="person1_name">Your Name:</label>
+                <input type="text" name="person1_name" required>
+                <label for="person2_name">Your Love Interest's Name:</label>
+                <input type="text" name="person2_name" required>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

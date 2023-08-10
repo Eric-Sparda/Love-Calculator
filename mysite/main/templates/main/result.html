@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(238, 174, 202);
+            color: transparent;
+            background-image: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%); 
+            background-clip: text; 
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6347;
+        }
+        .result-container {
+            text-align: center;
+            color: #ff6347;
+        }
+        .heart {
+            font-size: 48px;
+            color: #ff6347;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Love Calculator Result</h1>
+        <div class="result-container">
+            <p>Your love percentage is:</p>
+            <span class="heart">&#10084; {{ love_percentage }}%</span>
+        </div>
+        <a href="{% url 'index' %}" class="back-link">Calculate Another Love</a> 
+    </div>
+</body>
+</html>
