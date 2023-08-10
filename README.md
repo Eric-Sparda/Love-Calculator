@@ -1,8 +1,8 @@
 # Love-Calculator
 This is a Love Calculator project written in Python Django. The project asks the user to input their name and the name of their crush, and then calculates a love percentage based on a simple algorithm. The result is displayed on the result page
 
-# Homepage 
-![HomePage](Homepage.png "HomePage")
+`Homepage` 
+![HomePage](Homepage.PNG)
 
-# Result
-![Result Page](Result.png)
+`Result Page`
+![Result Page](Result.PNG)
